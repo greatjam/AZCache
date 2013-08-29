@@ -68,7 +68,7 @@ static int kCacheMemoryLimit = 10;
   }
 }
 
-+ (NSObject *)fetchCachedItemForKey:(NSString *)key {
++ (id)fetchCachedItemForKey:(NSString *)key {
   return [[self cacheForKey:key] object];
 }
 

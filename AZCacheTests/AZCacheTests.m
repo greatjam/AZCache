@@ -32,9 +32,9 @@
   [AZCacheManager cacheItem:@[@"1",@"2",@"3"] itemKey:@"array1" frequencyLevel:kAZCacheUseFrequencyLevelHigh];
   [AZCacheManager cacheItem:@[@"2",@"3",@"4"] itemKey:@"array2" frequencyLevel:kAZCacheUseFrequencyLevelLow];
   
-  NSArray *array1 = (NSArray *)[AZCacheManager fetchCachedItemForKey:@"array1"];
+  NSArray *array1 = [AZCacheManager fetchCachedItemForKey:@"array1"];
   NSArray *array2 = (NSArray *)[AZCacheManager fetchCachedItemForKey:@"array2"];
-  XCTAssert([[array1 objectAtIndex:1] isEqualToString:@"2"], @"incorrect num:%@",[array1 objectAtIndex:1]);
+  XCTAssert([[array1 objectAtIndex:1] isEqualToString:@"2"], @"incorrct num:%@",[array1 objectAtIndex:1]);
   XCTAssert([[array2 objectAtIndex:2] isEqualToString:@"4"], @"incorrect num:%@",[array1 objectAtIndex:2]);
   XCTAssertNotNil(array1, @"data exist");
   

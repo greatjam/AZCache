@@ -19,7 +19,7 @@ typedef NS_ENUM(NSInteger, AZCacheUseFrequencyLevel){
 @interface AZCacheManager : NSObject
 
 + (void)cacheItem:(NSObject *)object itemKey:(NSString *)key frequencyLevel:(AZCacheUseFrequencyLevel)level;
-+ (NSObject *)fetchCachedItemForKey:(NSString *)key;
++ (id)fetchCachedItemForKey:(NSString *)key;
 
 + (void)removeCacheForKey:(NSString *)key;
 + (void)clearCache;
