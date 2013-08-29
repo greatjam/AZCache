@@ -19,6 +19,8 @@
 		FA3ABEF917CF32E7004B2B32 /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = FA3ABEE117CF32E7004B2B32 /* UIKit.framework */; };
 		FA3ABF0117CF32E7004B2B32 /* InfoPlist.strings in Resources */ = {isa = PBXBuildFile; fileRef = FA3ABEFF17CF32E7004B2B32 /* InfoPlist.strings */; };
 		FA3ABF0317CF32E7004B2B32 /* AZCacheTests.m in Sources */ = {isa = PBXBuildFile; fileRef = FA3ABF0217CF32E7004B2B32 /* AZCacheTests.m */; };
+		FA3ABF0E17CF3309004B2B32 /* AZCache.m in Sources */ = {isa = PBXBuildFile; fileRef = FA3ABF0D17CF3309004B2B32 /* AZCache.m */; };
+		FA3ABF1117CF3316004B2B32 /* AZCacheManager.m in Sources */ = {isa = PBXBuildFile; fileRef = FA3ABF1017CF3316004B2B32 /* AZCacheManager.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -48,6 +50,10 @@
 		FA3ABEFE17CF32E7004B2B32 /* AZCacheTests-Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = "AZCacheTests-Info.plist"; sourceTree = "<group>"; };
 		FA3ABF0017CF32E7004B2B32 /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/InfoPlist.strings; sourceTree = "<group>"; };
 		FA3ABF0217CF32E7004B2B32 /* AZCacheTests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = AZCacheTests.m; sourceTree = "<group>"; };
+		FA3ABF0C17CF3309004B2B32 /* AZCache.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AZCache.h; sourceTree = "<group>"; };
+		FA3ABF0D17CF3309004B2B32 /* AZCache.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = AZCache.m; sourceTree = "<group>"; };
+		FA3ABF0F17CF3316004B2B32 /* AZCacheManager.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AZCacheManager.h; sourceTree = "<group>"; };
+		FA3ABF1017CF3316004B2B32 /* AZCacheManager.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = AZCacheManager.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -109,6 +115,10 @@
 			children = (
 				FA3ABEEC17CF32E7004B2B32 /* AppDelegate.h */,
 				FA3ABEED17CF32E7004B2B32 /* AppDelegate.m */,
+				FA3ABF0C17CF3309004B2B32 /* AZCache.h */,
+				FA3ABF0D17CF3309004B2B32 /* AZCache.m */,
+				FA3ABF0F17CF3316004B2B32 /* AZCacheManager.h */,
+				FA3ABF1017CF3316004B2B32 /* AZCacheManager.m */,
 				FA3ABEEF17CF32E7004B2B32 /* Images.xcassets */,
 				FA3ABEE417CF32E7004B2B32 /* Supporting Files */,
 			);
@@ -239,6 +249,8 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				FA3ABF0E17CF3309004B2B32 /* AZCache.m in Sources */,
+				FA3ABF1117CF3316004B2B32 /* AZCacheManager.m in Sources */,
 				FA3ABEEE17CF32E7004B2B32 /* AppDelegate.m in Sources */,
 				FA3ABEEA17CF32E7004B2B32 /* main.m in Sources */,
 			);
