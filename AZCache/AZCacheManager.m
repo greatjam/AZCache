@@ -56,6 +56,11 @@ static int kCacheMemoryLimit = 10;
 }
 
 #pragma mark - public methods
++ (void)cacheItem:(NSObject *)object itemKey:(NSString *)key
+{
+  [self cacheItem:object itemKey:key frequencyLevel:kAZCacheUseFrequencyLevelNormal];
+}
+
 + (void)cacheItem:(NSObject *)object itemKey:(NSString *)key frequencyLevel:(AZCacheUseFrequencyLevel)level {
   AZCacheStoreType cacheStoreType = [self storeTypeWithFrequencyLevel:level];
   AZCache *cache = [[AZCache alloc] initWithObject:object cacheKey:key cacheType:cacheStoreType];
