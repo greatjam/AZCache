@@ -36,17 +36,19 @@ static int kCacheMemoryLimit = 10;
   }
   memoryCaches = [[NSMutableDictionary alloc] init];
   recentAccessedKeys = [[NSMutableArray alloc] init];
-  
-  [[NSNotificationCenter defaultCenter] addObserver:self selector:@selector(saveAllMemoryCacheToDisk)
-                                               name:UIApplicationDidReceiveMemoryWarningNotification
-                                             object:nil];
-  [[NSNotificationCenter defaultCenter] addObserver:self selector:@selector(saveAllMemoryCacheToDisk)
-                                               name:UIApplicationDidEnterBackgroundNotification
-                                             object:nil];
-  [[NSNotificationCenter defaultCenter] addObserver:self selector:@selector(saveAllMemoryCacheToDisk)
-                                               name:UIApplicationWillTerminateNotification
-                                             object:nil];
-  [[NSNotificationCenter defaultCenter] addObserver:self selector:@selector(saveAllMemoryCacheToDisk) name:kAZSyncCacheDataNotification object:nil];
+  NSMutableArray *notificationNames = [NSMutableArray array];
+#if TARGET_OS_IPHONE
+  [notificationNames addObjectsFromArray:@[UIApplicationDidReceiveMemoryWarningNotification,
+                                       UIApplicationDidEnterBackgroundNotification,UIApplicationWillTerminateNotification]];
+#else
+  [notificationNames addObjectsFromArray:@[NSApplicationWillHideNotification,
+                                           NSApplicationWillResignActiveNotification,
+                                           NSApplicationWillTerminateNotification]];
+#endif
+  [notificationNames addObject:kAZSyncCacheDataNotification];
+  for (NSString *notiName in notificationNames) {
+    [[NSNotificationCenter defaultCenter] addObserver:self selector:@selector(saveAllMemoryCacheToDisk) name:notiName object:nil];
+  }
 }
 
 + (void)dealloc {
