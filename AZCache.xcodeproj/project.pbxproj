@@ -335,6 +335,10 @@
 		FA3AC01C17CF5A13004B2B32 /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
+				ARCHS = (
+					"$(ARCHS_STANDARD)",
+					armv7,
+				);
 				DSTROOT = /tmp/AZCache.dst;
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
 				GCC_PREFIX_HEADER = "AZCache/AZCache-Prefix.pch";
@@ -349,6 +353,10 @@
 		FA3AC01D17CF5A13004B2B32 /* Release */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
+				ARCHS = (
+					"$(ARCHS_STANDARD)",
+					armv7,
+				);
 				DSTROOT = /tmp/AZCache.dst;
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
 				GCC_PREFIX_HEADER = "AZCache/AZCache-Prefix.pch";
